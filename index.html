@@ -1,0 +1,909 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Java Tutorial</title>
+    <style>
+        /* Navbar styling */
+        #navbar {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 200px;
+            height: 100%;
+            background-color: #333;
+            color: #fff;
+            display: flex;
+            flex-direction: column;
+            padding: 10px;
+            box-shadow: 2px 0 5px rgba(0, 0, 0, 0.5);
+        }
+
+        #navbar header {
+            font-size: 1.5em;
+            font-weight: bold;
+            margin-bottom: 20px;
+            text-align: center;
+        }
+
+        .nav-link {
+            color: #fff;
+            text-decoration: none;
+            padding: 10px 15px;
+            margin: 5px 0;
+            display: block;
+            border-radius: 5px;
+            transition: background-color 0.3s;
+        }
+
+        .nav-link:hover {
+            background-color: #575757;
+        }
+
+        /* Main content styling */
+        .main-body {
+            margin-left: 220px;
+            padding: 20px;
+        }
+
+        code {
+            background-color: #f4f4f4;
+            padding: 5px;
+            display: block;
+            margin: 10px 0;
+            border-left: 3px solid #333;
+        }
+
+        ul {
+            margin: 10px 0;
+            padding-left: 20px;
+        }
+
+        ul li {
+            margin: 5px 0;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="main-body">
+        <nav id="navbar">
+            <header>java Tutorial</header>
+            <a href="#Intro" class="nav-link">What is java</a>
+            <a href="#Methods" class="nav-link">Methods</a>
+            <a href="#Object" class="nav-link">Objects and Classes</a>
+            <a href="#Inheritance" class="nav-link">Inheritance</a>
+            <a href="#Polymorphism" class="nav-link">Polymorphism</a>
+            <a href="#Abstraction" class="nav-link">Abstraction</a>
+            <a href="#Encapsulation" class="nav-link">Encapsulation</a>
+            <a href="#Interview Question" class="nav-link">Interview Question</a>
+        </nav>
+
+        <main id="main-doc">
+            <section class="main-section" id="Intro">
+                <header><b>What is Java?</header></b>
+                <p>
+                    Java is a high-level, object-oriented programming language and platform that is widely used for developing applications. It was created by James Gosling and his team at Sun Microsystems, released in 1995, and is now owned by Oracle Corporation. Java is known for its write once, run anywhere (WORA) capability, meaning code written in Java can run on any device that has a Java Virtual Machine (JVM).
+
+                    <br>
+                    <br>
+                    <b>Key Features of Java:</b>
+                    <br>
+                    <br>
+
+                    1.Platform Independence: Java applications are compiled into bytecode, which can run on any device with a JVM.
+                    <br>
+
+                    2.Object-Oriented: It uses objects and classes to structure code, making it modular and reusable.
+                    <br>
+
+                    3.Robust and Secure: Java has strong memory management, error handling, and built-in security features.
+                    <br>
+
+                    4.Multi-threaded: Java supports concurrent execution of threads, making it suitable for high-performance applications.
+                    <br>
+
+                    5.Portable: The same Java code can run on different platforms without modification.
+                    <br>
+
+                    6.Rich API: Java provides a comprehensive library of classes and interfaces for tasks such as networking, database access, and GUI development.
+                    <br>
+                    <br>
+<b>Applications of Java:</b>
+<br>
+<br>
+
+1.Web Development: Backend development with frameworks like Spring and JavaServer Pages (JSP).
+<br>
+
+2.Mobile Development: Android apps using Java and Kotlin.
+<br>
+3.Desktop Applications: GUI-based tools with JavaFX or Swing.
+<br>
+4.Enterprise Applications: Large-scale systems using Java EE (Jakarta EE).
+<br>
+5.Game Development: Using libraries like LWJGL (Lightweight Java Game Library).
+<br>
+6.Embedded Systems: Devices like smart TVs and set-top boxes.
+<br>
+7.Big Data: With tools like Apache Hadoop.
+<br>
+<br>
+Java remains popular due to its versatility, performance, and active community support
+                </p>
+                <p>
+                    The “Hello World” program is the first step towards learning any programming language:
+                </p>
+                <code>
+public class Main {<br>
+  public static void main(String[] args) {<br>
+    System.out.println("Hello World");<br>
+  }<br>
+} <br>
+                </code>
+
+<b>Java Variables</b> <br><br>
+Variables are containers for storing data values.<br><br>
+
+In Java, there are different types of variables, for example:<br><br>
+
+String - stores text, such as "Hello". String values are surrounded by double quotes<br>
+int - stores integers (whole numbers), without decimals, such as 123 or -123<br>
+float - stores floating point numbers, with decimals, such as 19.99 or -19.99<br>
+char - stores single characters, such as 'a' or 'B'. Char values are surrounded by single quotes<br>
+boolean - stores values with two states: true or false<br>
+
+<br>
+<br>
+<b>Java Arrays</b><br><br>
+Arrays are used to store multiple values in a single variable, instead of declaring separate variables for each value.<br><br>
+
+To declare an array, define the variable type with square brackets:<br>
+                <p>
+                    The main pillars of Object-Oriented Programming are: String[] cars;<br>
+                </p>
+                <ul>
+                    <li>Objects and Classes</li>
+                    <li>Inheritance</li>
+                    <li>Polymorphism</li>
+                    <li>Abstraction</li>
+                    <li>Encapsulation</li>
+                </ul>
+            </section>
+            <section class="main-section" id="Methods">
+                <header><b>Methods</header></b>
+                <p>
+                    Methods are blocks of code that perform a specific task and are defined inside a class. <br>
+
+                    
+                    Methods allow code to be reusable and help in organizing and managing the functionality of a program.<br><br>
+
+<b>Key Concepts of Methods in Java</b><br><br>
+Method Signature: A method is defined by its signature, which includes its name, return type, parameters (if any), and exception specifications.<br>
+Method Declaration: Methods are declared inside classes, and they can have:<br>
+Modifiers (e.g., public, private, static, etc.)<br>
+Return Type (e.g., void, int, String, etc.)<br>
+Method Name (an identifier)<br>
+Parameters (optional)<br>
+Method Body (the code that runs when the method is called)<br>
+Return Type: Every method in Java must specify the type of value it returns. If it does not return anything, it uses the void keyword.<br>
+                </p>
+                <p>
+                    <b>Types of Methods in Java</b><br><br>
+Instance Methods: Methods that belong to an instance of a class (objects).<br>
+Class Methods (Static Methods): Methods that belong to the class itself and can be called without creating an object.<br>
+                </p>
+                <p>
+                    <b>Method Overloading</b><br><br>
+Method overloading in Java occurs when a class has more than one method with the same name but different parameters (either in number, type, or order). The return type can be different, but it alone cannot differentiate overloaded methods.<br><br>
+<code>
+    class Printer {<br>
+    
+    void print(int a) {<br>
+        System.out.println("Printing integer: " + a);<br>
+    }<br>
+    void print(String a, int b) {<br>
+        System.out.println("Printing string: " + a + " and number: " + b);<br>
+    }<br>
+}<br>
+public class Main {<br>
+    public static void main(String[] args) {<br>
+        Printer printer = new Printer();<br>
+        printer.print(100);               // Calls print(int)<br>
+        printer.print("Hello", 200);      // Calls print(String, int)<br>
+    }<br>
+}<br>
+</code>
+<b>
+    Method Overriding</b><br><br>
+Method overriding occurs when a subclass provides a specific implementation of a method that is already defined in its parent class. This allows the subclass to provide a different behavior than the parent class.<br>
+        </p>
+        <code>
+            
+            class Animal {<br>
+    void sound() {<br>
+        System.out.println("Animal makes a sound.");<br>
+    }<br>
+}<br>
+
+class Dog extends Animal {<br>
+    // Method overriding<br>
+    @Override<br>
+    void sound() {<br>
+        System.out.println("Dog barks.");<br>
+    }<br>
+}<br>
+
+public class Main {<br>
+    public static void main(String[] args) {<br>
+        Animal animal = new Animal();<br>
+        Dog dog = new Dog();<br>
+
+        animal.sound();<br>
+        dog.sound();     // Output: Dog barks.<br>
+    }<br>
+}<br>
+
+        </code>
+
+            <section class="main-section" id="Object">
+                <header><b>Objects and Classes</header></b><br>
+                <p>
+                    Object-oriented programming uses objects to represent real-world entities.<br>
+                    It binds data and functions that operate on the data to prevent unauthorized access.
+                </p>
+                <p>
+                    <b>Object:</b> An identifiable entity with characteristics and behavior. Objects are instances of classes.
+                </p>
+                <code>
+                    public class Main {<br>
+                    int x = 5;<br>
+
+  public static void main(String[] args) {<br>
+    Main myObj = new Main();<br>
+    System.out.println(myObj.x);<br>
+  }<br>
+}<br>
+</code>
+                   <b>Multiple Objects</b><br><br>
+You can create multiple objects of one class:<br>
+
+Example<br>
+Create two objects of Main:<br><br>
+<code>
+public class Main {<br>
+  int x = 5;<br>
+
+  public static void main(String[] args) {<br>
+    Main myObj1 = new Main();  // Object 1<br>
+    Main myObj2 = new Main();  // Object 2<br>
+    System.out.println(myObj1.x);<br>
+    System.out.println(myObj2.x);<br>
+  }<br>
+}<br>
+</code>            
+                <p>
+                    <b>Class:</b> A blueprint for objects. For example, a class "Car" might include properties like
+                    wheels, speed limits, and mileage.
+                </p>
+                <code>
+                    public class Main {<br>
+  int x = 10;<br>
+
+  public static void main(String[] args) {<br>
+    Main myObj = new Main();<br>
+    myObj.x = 25; // x is now 25<br>
+    System.out.println(myObj.x);<br>
+  }<br>
+}<br>
+                </code>
+
+<p>
+    <b>Java User Input</b><br><br>
+The Scanner class is used to get user input, and it is found in the java.util package.<br>
+
+To use the Scanner class, create an object of the class and use any of the available methods found in the Scanner class documentation. In our example, we will use the nextLine() method, which is used to read Strings:<br><br>
+<code>
+class Main {<br>
+  public static void main(String[] args) {<br>
+    Scanner myObj = new Scanner(System.in);<br>
+    String userName;<br>
+    System.out.println("Enter username");<br>
+    userName = myObj.nextLine();<br>   
+    System.out.println("Username is: " + userName); <br>       
+  }<br>
+}<br>
+
+</code>
+
+</p>
+            </section>
+
+            <section class="main-section" id="Inheritance">
+                <header><b>Inheritance</header></b>
+                <p>
+                    Inheritance allows a class to derive properties and characteristics from another class.
+                    It reduces code duplication and enhances reusability.
+                </p>
+                <p>
+                    <b>Key Concepts of Inheritance in Java:</b><br><br>
+Parent Class (Superclass): The class whose properties and methods are inherited.<br>
+Child Class (Subclass): The class that inherits the properties and methods of the parent class.<br>
+Reusability: The child class can reuse the parent class's code.<br>
+Overriding: The child class can provide specific implementations for methods defined in the parent class.<br>
+Polymorphism: Enables the child class to be treated as the parent class, supporting dynamic method invocation.<br>
+                </p>
+                <b>Syntax of Inheritance:</b><br>
+                <code><br>
+                    class Parent {<br>
+    // Fields and methods of the parent class<br>
+    void display() {<br>
+        System.out.println("This is the parent class.");<br>
+    }<br>
+}<br><br>
+
+class Child extends Parent {<br>
+    // Additional fields and methods of the child class<br>
+    void displayChild() {<br>
+        System.out.println("This is the child class.");<br>
+    }<br>
+}<br><br>
+
+public class Main {<br>
+    public static void main(String[] args) {<br>
+        Child obj = new Child();<br>
+        obj.display();       // Accessing parent class method<br>
+        obj.displayChild();  // Accessing child class method<br>
+    }<br>
+}<br>
+
+                </code>
+                <p>
+                    <b>Advantages of Inheritance:</b><br><br>
+
+        1. Code reuse.<br>
+        2. Improves readability and maintainability.<br>
+        3. Establishes a clear hierarchical structure.<br>
+        4. Limitations of Inheritance.<br>
+        5. Tight coupling between parent and child classes.<br>
+        6. Improper use can lead to less flexible code.<br>
+        7. Overridden methods may introduce unintended behavior.<br><br>
+        
+        Inheritance is a fundamental concept that enhances Java's object-oriented design, enabling robust and reusable code.<br>
+    
+                </p>
+                <p>
+                    <b>Types of Inheritance:</b>
+                </p>
+                <ul>
+                    <li>Single Inheritance</li>
+                    <li>Multiple Inheritance</li>
+                    <li>Multilevel Inheritance</li>
+                    <li>Hierarchical Inheritance</li>
+                    <li>Hybrid Inheritance</li>
+                </ul>
+                <p>
+                    <b>1. Single Inheritance</b><br><br>
+In single inheritance, a subclass inherits from a single superclass.<br><br>
+<code>
+    class Animal {<br>
+    void eat() {
+        System.out.println("This animal eats food.");<br>
+    }<br>
+}<br><br>
+
+class Dog extends Animal {<br>
+    void bark() {<br>
+        System.out.println("The dog barks.");<br>
+    }<br>
+}<br><br>
+
+public class Main {<br>
+    public static void main(String[] args) {<br>
+        Dog dog = new Dog();<br>
+        dog.eat();  // Inherited method<br>
+        dog.bark(); // Child class method<br>
+    }<br>
+}<br><br>
+</code>      
+                </p>
+                <p><b>2. Multilevel Inheritance</b><br><br>
+In multilevel inheritance, a class inherits from another class, and then another class inherits from it.
+<code>
+    class Animal {<br>
+    void eat() {<br>
+        System.out.println("This animal eats food.");<br>
+    }<br>
+}<br><br>
+
+class Mammal extends Animal {<br>
+    void walk() {<br>
+        System.out.println("Mammals walk.");<br>
+    }<br>
+}<br>
+
+class Dog extends Mammal {<br>
+    void bark() {<br>
+        System.out.println("The dog barks.");<br>
+    }<br>
+}<br><br>
+
+public class Main {<br>
+    public static void main(String[] args) {<br>
+        Dog dog = new Dog();<br>
+        dog.eat();  // Grandparent class method<br>
+        dog.walk(); // Parent class method<br>
+        dog.bark(); // Child class method<br>
+    }<br>
+}<br>
+</code>
+
+<b>3. Hierarchical Inheritance</b><br><br>
+In hierarchical inheritance, multiple subclasses inherit from a single superclass.<br><br>
+<code>
+    class Animal {<br>
+    void eat() {<br>
+        System.out.println("This animal eats food.");<br>
+    }<br>
+}<br>
+
+class Dog extends Animal {<br>
+    void bark() {<br>
+        System.out.println("The dog barks.");<br>
+    }<br>
+}<br>
+
+class Cat extends Animal {<br>
+    void meow() {<br>
+        System.out.println("The cat meows.");<br>
+    }<br>
+}<br><br>
+
+public class Main {<br>
+    public static void main(String[] args) {<br>
+        Dog dog = new Dog();<br>
+        dog.eat();<br>
+        dog.bark();<br>
+
+        Cat cat = new Cat();<br>
+        cat.eat();<br>
+        cat.meow();<br>
+    }<br>
+}<br>
+</code>
+<b>4. Multiple Inheritance (Using Interfaces)</b><br><br>
+Java does not support multiple inheritance with classes to avoid the diamond problem, but it allows multiple inheritance through interfaces<br><br>
+<code>
+    interface Animal {<br>
+    void eat();<br>
+}<br>
+
+interface Pet {<br>
+    void play();<br>
+}<br>
+
+class Dog implements Animal, Pet {<br>
+    public void eat() {<br>
+        System.out.println("The dog eats food.");<br>
+    }<br>
+
+    public void play() {<br>
+        System.out.println("The dog loves to play.");<br>
+    }<br>
+}<br>
+
+public class Main {<br>
+    public static void main(String[] args) {<br>
+        Dog dog = new Dog();<br>
+        dog.eat();<br>
+        dog.play();<br>
+    }<br>
+}<br>
+
+</code>
+<b>5. Hybrid Inheritance (Using Interfaces)</b><br><br>
+Hybrid inheritance combines two or more types of inheritance. Java supports it only through interfaces.<br><br>
+<code>
+    interface Animal {<br>
+    void eat();<br>
+}<br>
+
+interface Mammal {<br>
+    void walk();<br>
+}<br>
+
+class Dog implements Animal, Mammal {<br>
+    public void eat() {<br>
+        System.out.println("The dog eats food.");<br>
+    }<br>
+
+    public void walk() {<br>
+        System.out.println("The dog walks on four legs.");<br>
+    }<br>
+}<br>
+
+public class Main {<br>
+    public static void main(String[] args) {<br>
+        Dog dog = new Dog();<br>
+        dog.eat();<br>
+        dog.walk();<br>
+    }<br>
+}<br>
+</code>
+</p>
+            </section>
+
+
+            <section class="main-section" id="Polymorphism">
+                <header><b>Polymorphism</header></b>
+                <p>
+                    Polymorphism is one of the fundamental principles of Object-Oriented Programming (OOP) in Java. It allows objects to be treated as instances of their parent class, enabling methods to perform different behaviors based on the object they are called on.<br><br>
+
+
+                    Polymorphism means "many forms." It allows the same interface to be used for different underlying forms.
+                </p>
+                <p>
+                    <b>Types of Polymorphism:</b>
+                    <br>1. Compile-time Polymorphism (e.g., Function Overloading)
+                    <br>2. Runtime Polymorphism (e.g., Function Overriding)
+                </p>
+                <p><b>Compile-Time Polymorphism (Static Binding)</b><br>
+This is achieved through method overloading, where multiple methods have the same name but differ in parameters (type, number, or order).<br>
+The method to be executed is determined at compile time.<br>
+<code>
+    class Calculator {<br>
+    int add(int a, int b) {<br>
+        return a + b;<br>
+    }<br>
+
+    double add(double a, double b) {<br>
+        return a + b;<br>
+    }<br>
+
+    int add(int a, int b, int c) {<br>
+        return a + b + c;<br>
+    }<br>
+}<br><br>
+
+public class Main {<br>
+    public static void main(String[] args) {<br>
+        Calculator calc = new Calculator();<br>
+        System.out.println(calc.add(5, 3));   // Calls add(int, int)<br>
+        System.out.println(calc.add(5.5, 3.3));   // Calls add(double, double)<br>
+        System.out.println(calc.add(5, 3, 2));    // Calls add(int, int, int)<br>
+    }<br>
+}<br>
+</code>
+<b>
+    Run-Time Polymorphism (Dynamic Binding)</b><br><br>
+This is achieved through method overriding, where a subclass provides a specific implementation for a method that is already defined in its parent class.<br>
+The method to be executed is determined at runtime based on the actual object type.<br><br>
+<code>
+    class Animal {<br>
+    void sound() {<br>
+        System.out.println("This animal makes a sound.");<br>
+    }<br>
+}<br>
+
+class Dog extends Animal {<br>
+    @Override<br>
+    void sound() {<br>
+        System.out.println("The dog barks.");<br>
+    }<br>
+}<br>
+
+class Cat extends Animal {<br>
+    @Override<br>
+    void sound() {<br>
+        System.out.println("The cat meows.");<br>
+    }<br>
+}<br>
+
+public class Main {<br>
+    public static void main(String[] args) {<br>
+        Animal animal1 = new Dog();  // Upcasting<br>
+        Animal animal2 = new Cat();  // Upcasting<br>
+
+        animal1.sound();  // Calls Dog's sound method<br>
+        animal2.sound();  // Calls Cat's sound method<br>
+    }<br>
+}<br>   
+</code>
+</p>
+<p>
+    <b>Polymorphism in Action</b><br>
+Polymorphism enables Java to support flexible and extensible code.<br>
+
+Interfaces and Abstract Classes: Polymorphism is often used in interfaces and abstract classes to provide common behavior for different implementations.<br>
+</p>
+<p>
+    <b>Benefits of Polymorphism</b><br>
+Code Reusability: Parent class code can be reused by subclasses.<br>
+Flexibility: A single interface can represent multiple types.<br>
+Extensibility: Makes adding new functionality easier without altering existing code.<br>
+Dynamic Behavior: Allows the same method call to perform different actions based on the object.<br>
+Polymorphism, coupled with abstraction, encapsulation, and inheritance, makes Java a powerful language for designing scalable and maintainable applications.<br>
+</p>
+            </section>
+
+            <section class="main-section" id="Abstraction">
+                <header><b>Abstraction</header></b>
+                <p>
+                    Abstraction is a core concept of Object-Oriented Programming (OOP) in Java. It is the process of hiding the implementation details of a class and exposing only the essential features or functionalities to the user. This helps in reducing complexity and increasing maintainability.<br><br>
+                    
+
+                    Abstraction hides implementation details and exposes only essential features.
+                    For example, when driving a car, you know how to accelerate but not the internal mechanism.<br><br>
+
+                    <b>Key Points About Abstraction</b><br><br>
+1. Focus on "What" over "How":<br>
+
+Abstraction focuses on what a class can do (methods and properties) rather than how it does it (implementation details).<br>
+2. Achieved Using Abstract Classes and Interfaces:<br>
+
+3. Abstract Classes: Classes that can contain both abstract methods (methods without implementation) and concrete methods (methods with implementation).<br>
+4. Interfaces: A blueprint for a class that contains only abstract methods (prior to Java 8) and constants. From Java 8 onward, interfaces can also have default and static methods.<br>
+4.Real-Life Example: Think of a TV remote control:<br><br>
+
+You know what buttons to press (functionality), but you don't know the internal wiring or how it works (implementation).<br><br>
+                </p>
+                <p>
+                    The abstract keyword is a non-access modifier, used for classes and methods:<br>
+
+Abstract class: is a restricted class that cannot be used to create objects (to access it, it must be inherited from another class).<br><br>
+
+Abstract method: can only be used in an abstract class, and it does not have a body. The body is provided by the subclass (inherited from).<br>
+An abstract class can have both abstract and regular methods:<br>  
+
+<code>
+    abstract class Animal {<br>
+  
+  public abstract void animalSound();<br>
+ 
+  public void sleep() {<br>
+    System.out.println("Zzz");<br>
+  }<br>
+}<br>
+
+// Subclass (inherit from Animal)<br>
+class Pig extends Animal {<br>
+  public void animalSound() {<br>
+    // The body of animalSound() is provided here<br>
+    System.out.println("The pig says: wee wee");<br>
+  }<br>
+}<br>
+
+class Main {<br>
+  public static void main(String[] args) {<br>
+    Pig myPig = new Pig(); // Create a Pig object<br>
+    myPig.animalSound();<br>
+    myPig.sleep();<br>
+  }<br>
+}<br>
+</code>
+                </p>
+            </section>
+
+<section class="main-section" id="Interface">
+                <header><b>Interface</header></b>
+                <p>
+                    An interface in Java is a blueprint for a class. It is a reference type that can contain only abstract methods (prior to Java 8) and constants (fields that are public, static, and final by default). Interfaces are used to achieve abstraction and multiple inheritance in Java.
+                </p>
+                <p>
+                    <b>Key Features of an Interface</b><br>
+Abstract Methods: Interfaces primarily contain methods that have no implementation (until Java 8).<br>
+Constants: Fields in an interface are implicitly public, static, and final.<br>
+Multiple Inheritance: A class can implement multiple interfaces, enabling multiple inheritance.<br>
+Default and Static Methods (Java 8+): Interfaces can have methods with a default implementation or static methods.<br>
+Functional Interfaces (Java 8+): An interface with exactly one abstract method can be used as a functional interface (e.g., for lambda expressions).<br><br>
+<code>
+    interface InterfaceName {<br>
+    // Abstract method<br>
+    void methodName();<br>
+
+    // Default method (Java 8+)
+    default void defaultMethod() {<br>
+        System.out.println("This is a default method.");<br>
+    }<br>
+
+    // Static method (Java 8+)<br>
+    static void staticMethod() {<br>
+        System.out.println("This is a static method.");<br>
+    }<br>
+}<br>
+
+</code>
+                </p>
+            </section>
+
+
+            <section class="main-section" id="Encapsulation">
+                <header><b>Encapsulation</header></b>
+                <p>
+                    Encapsulation is one of the fundamental principles of Object-Oriented Programming (OOP) in Java. It refers to the bundling of data (fields) and methods (functions) that operate on the data into a single unit, i.e., a class. It also restricts direct access to the internal details of an object and allows controlled access through methods.
+                </p>
+                <p>
+                    <b>Key Features of Encapsulation</b><br><br>
+Data Hiding: Internal details of the object are hidden from the outside world.<br>
+Access Control: Access to fields is restricted using access modifiers (e.g., private).<br>
+Getter and Setter Methods: Provide controlled access to private fields.<br>
+Improves Maintainability: Changes to the internal implementation do not affect other parts of the program.<br><br>
+<b>How to Achieve Encapsulation in Java</b><br><br>
+Declare the fields as private.<br>
+Provide public getter and setter methods to access and update the private fields.<br>
+                </p>
+                <code>
+                    class Student {<br>
+    private String name;<br>
+    private int age;<br>
+
+    // Public getter method for 'name'<br>
+    public String getName() {<br>
+        return name;<br>
+    }<br>
+
+    // Public setter method for 'name'< 
+    public void setName(String name) {<br>
+        this.name = name;<br>
+    }<br>
+    public int getAge() {<br>
+        return age;<br>
+    }<br>
+
+    // Public setter method for 'age'<br>
+    public void setAge(int age) {<br>
+        if (age > 0) { // Validation to ensure a positive age<br>
+            this.age = age;<br>
+        } else {<br>
+            System.out.println("Age must be positive.");<br>
+        }<br>
+    }<br>
+}<br>
+
+public class Main {<br>
+    public static void main(String[] args) {<br>
+        Student student = new Student();<br>
+        student.setName("John");<br>
+        student.setAge(20);<br>
+        System.out.println("Student Name: " + student.getName());<br>
+        System.out.println("Student Age: " + student.getAge());<br>
+    }<br>
+}<br>
+
+                </code>
+                <p>
+                    <b>Advantages of Encapsulation</b><br><br>
+Data Protection: Prevents unauthorized access to data by making fields private.<br>
+Improved Flexibility: You can change the implementation of methods or fields without affecting external code.<br>
+Reusability: Encapsulated code is easier to reuse.<br>
+Readability and Maintenance: Encapsulation improves code readability and makes the program easier to maintain.<br>
+                </p>
+                <p>
+                    <b>Encapsulation in Real Life</b><br><br>
+Think of a bank account:<br><br>
+
+1.You cannot directly access the balance (private field).<br>
+2.You use methods like deposit() and withdraw() (public methods) to modify the balance.<br><br>
+These methods ensure proper validation (e.g., you cannot withdraw more than the available balance).
+<br><br>
+<b>Best Practices for Encapsulation</b><br><br>
+1. Always declare fields as private unless there's a compelling reason to make them public.<br>
+2. Use getter and setter methods for controlled access.<br>
+Include validation logic in setter methods to ensure data integrity.<br>
+3. Minimize the visibility of methods and fields to what is strictly necessary.<br>
+4. Encapsulation is a cornerstone of object-oriented design, enabling robust, secure, and modular programming.<br>
+                </p>
+            </section>
+            <section class="main-section" id="Interview Question">
+                <header><b>Interview Question</header></b>
+                <p>
+                    <b> 1. What are the main features of Java?<br><br></b>
+Answer:<br>
+Object-Oriented: Everything in Java is treated as an object.<br>
+Platform-Independent: Java programs can run on any platform that supports the JVM.<br>
+Multithreading: Java supports multi-threading, allowing multiple threads to run concurrently.<br>
+Memory Management: Automatic garbage collection for efficient memory usage.<br>
+Security: Provides robust security features like bytecode verification and sandboxing.<br>
+                </p>
+                <p>
+                    2. What is the difference between == and .equals() in Java?<br><br>
+Answer:<br>
+
+== compares the memory addresses (references) of two objects, i.e., it checks if two references point to the same memory location.<br>
+.equals() compares the actual contents of two objects (depends on the implementation in the class, such as in String or Integer).<br>
+                </p>
+            <p>
+                3. What are Java access modifiers?<br>
+Answer:<br>
+Java provides the following access modifiers to control the visibility of classes, methods, and fields:<br>
+
+public: Accessible from any other class.<br>
+protected: Accessible within the same package and by subclasses.<br>
+default (no modifier): Accessible only within the same package.<br>
+private: Accessible only within the same class.<br>
+            </p>
+            <p>
+                 4. What is the difference between an abstract class and an interface in Java?<br>
+Answer:<br>
+
+Abstract Class:<br>
+Can have both abstract and concrete methods.<br>
+Can have instance variables.<br>
+A class can inherit only one abstract class.<br><br>
+Interface:<br>
+Can only have abstract methods (until Java 8, where it can also have default and static methods).
+Cannot have instance variables (only constants).<br>
+A class can implement multiple interfaces.<br>
+
+            </p>
+            5. What is the difference between final, finally, and finalize in Java?<br>
+Answer:<br>
+
+final: Used to define constants, prevent method overriding, and prevent inheritance.<br>
+finally: A block used in exception handling that is always executed after a try-catch block, regardless of whether an exception is thrown or not.<br>
+finalize: A method called by the garbage collector before an object is destroyed.<br><br>
+
+6. What is the difference between String, StringBuilder, and StringBuffer in Java?<br>
+Answer:<br>
+
+String: Immutable; once created, its value cannot be changed.<br>
+StringBuilder: Mutable and not synchronized, used when modification of strings is required and thread-safety is not a concern.<br>
+StringBuffer: Mutable and synchronized, used when thread-safety is required during string modification.<br><br>
+
+7. What is Java's exception handling mechanism?<br>
+Answer: Java uses a try-catch block for exception handling:<br>
+
+try: The block of code where exceptions can occur.<br>
+catch: Catches and handles the exception.<br>
+finally: A block that executes code regardless of whether an exception was thrown.<br><br>
+
+8.What is the difference between throw and throws in Java?<br>
+Answer:<br>
+
+throw: Used to explicitly throw an exception.<br>
+throws: Declares that a method might throw an exception. It is used in the method signature.<br><br>
+
+9. What is multithreading in Java?<br>
+Answer: Multithreading is the concurrent execution of two or more threads. Each thread runs in parallel and performs a specific task. Java provides the Thread class and the Runnable interface to create and manage threads.<br><br>
+
+10. What is the difference between ArrayList and LinkedList in Java?<br>
+Answer:<br>
+
+ArrayList:<br>
+Backed by an array.<br>
+Provides fast random access (indexing).<br>
+Slower for adding/removing elements in the middle of the list.<br>
+LinkedList:<br>
+Backed by a doubly linked list.<br>
+Slower for random access.<br>
+Faster for adding/removing elements at the beginning or middle.<br><br>
+11. What is garbage collection in Java?<br>
+Answer: Garbage collection in Java is the process of automatically identifying and reclaiming memory occupied by objects that are no longer in use, to prevent memory leaks. The Java Garbage Collector (GC) performs this task.<br><br>
+
+12. What is the purpose of the static keyword in Java?<br>
+Answer:<br>
+
+static makes a member (variable or method) belong to the class, rather than to any specific instance of the class.<br>
+Static Variable: Shared among all instances of a class.<br>
+Static Method: Can be called without creating an instance of the class.<br><br>
+13. What is the difference between == and .equals() in Java for comparing objects?<br>
+Answer:<br>
+
+== checks if two references point to the same memory location.<br>
+.equals() checks if two objects have the same content (if the class overrides the equals() method).
+<br><br>
+
+14. Explain the concept of "polymorphism" in Java.<br>
+Answer: Polymorphism is the ability of an object to take on multiple forms. In Java, it allows methods or objects to behave in different ways depending on the context. This can be achieved through method overloading and method overriding.<br><br>
+
+15. What is an inner class in Java?<br>
+Answer: An inner class is a class defined within another class. It has access to the members of the outer class and can be used to logically group classes that are only used in one place.
+               
+            </section>
+        </main>
+    </div>
+</body>
+</html>
+
